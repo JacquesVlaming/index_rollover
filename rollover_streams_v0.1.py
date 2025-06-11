@@ -11,7 +11,7 @@ es_password = os.getenv("ES_PASSWORD", "default-prefix")
 es = Elasticsearch(
     hosts=es_host,
     # api_key=api_key,
-    basic_auth=(es_username, es_username),
+    basic_auth=(es_username, es_password),
     verify_certs=False,  # <- disables SSL certificate verification
     ssl_show_warn=False
 )
